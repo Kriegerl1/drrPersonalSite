@@ -1,0 +1,778 @@
+/* Reset e configurações globais */
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 50.5%;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+/* Variáveis de cor personalizadas */
+:root {
+    --set-sides-color: #E6070B;
+    /* Cor principal para cabeçalho e rodapé */
+    --set-main-color: #;
+    /* Cor principal de fundo para a seção principal */
+    --set-button-color: #E6070B;
+    /* Cor principal para botões */
+    --set-button-hover-color: #9d0306;
+    /* Cor ao passar o mouse sobre botões */
+    --set-tittle-color: #ff0a0ecc;
+    /* Cor para títulos */
+    --set-etc-color: rgb(255, 255, 255);
+    /* Cor para texto e outros elementos */
+}
+
+/* Estilos para o corpo da página */
+body {
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Estilos para cabeçalho e rodapé */
+header,
+footer {
+    width: 100%;
+    background-color: var(--set-sides-color);
+    height: 5vh;
+    z-index: 2;
+}
+
+header {
+    position: fixed;
+    z-index: 3;
+    box-shadow: .05rem .01rem .5rem black;
+}
+
+footer {
+    bottom: 0;
+    position: fixed;
+    box-shadow: -.05rem -.01rem .5rem black;
+}
+
+/* Estilos para a seção principal (main) */
+main {
+    background-color: var(--set-main-color);
+    flex: 1;
+    margin-top: 5vh;
+}
+
+/* Estilos para a imagem de fundo */
+.background-image {
+    display: flex;
+    justify-content: center;
+}
+
+.background-image img {
+    z-index: 1;
+    position: fixed;
+    height: 90vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Estilos para a seção de conteúdo */
+.container-copy {
+    height: 100%;
+    color: var(--set-etc-color);
+}
+
+.content-copy {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-family: system-ui, "Roboto";
+}
+
+/* Estilos para títulos e textos */
+.content-copy h3 {
+    font-size: 1.5rem;
+}
+
+.content-copy span {
+    font-size: 1.5rem;
+    font-weight: 650;
+}
+
+.content-copy h2 {
+    margin: 2rem;
+    text-decoration: none;
+    color: rgb(26, 38, 89);
+    font-size: 2rem;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.content-copy h2:hover {
+    color: rgb(65, 122, 196);
+    transition: all .2s;
+}
+
+/* Estilos para imagens na seção principal */
+.content-copy img {
+    height: 2rem;
+}
+
+/* Estilos para o contêiner principal */
+.main-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 7rem;
+}
+
+/* Estilos para imagens no contêiner principal */
+.main-container .image-content img:hover {
+    transform: scale(1.05);
+    transition: all .2s;
+    position: absolute;
+}
+
+
+.main-container .image-content img {
+    transition: all .2s;
+    height: 30rem;
+    border-radius: 50%;
+    border: .3rem ridge #E6070B;
+    position: absolute;
+    box-shadow: .1rem .1rem .5rem gray;
+}
+
+/* Estilos para a seção do cabeçalho */
+.profile-description {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.469);
+    margin: 3rem 0;
+}
+
+/* Estilos para o título do cabeçalho */
+.profile-description .tittle-name {
+    background: linear-gradient(360deg, rgba(0, 0, 0, .1) 0%, rgba(252, 176, 69, 0) 100%);
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilos para um círculo (usado como shape-outside) */
+.circulo {
+    float: left;
+    width: 40rem;
+    height: 30rem;
+    shape-outside: circle();
+}
+
+/* Estilos para a lista no cabeçalho */
+.profile-description .description {
+    height: 35rem;
+    width: 85rem;
+    padding: 5rem 0 2rem 0;
+    overflow: hidden;
+}
+
+.profile-description li {
+    list-style: none;
+    font-size: 1.8rem;
+    color: rgb(255, 255, 255);
+    font-family: 'poppins';
+}
+
+/* Estilos para links sociais */
+.socials-link li,
+a {
+    list-style: none;
+    font-size: 2rem;
+    color: var(--set-etc-color);
+    font-size: 2rem;
+    font-family: 'kanit';
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Estilos para ícones de links */
+.content-link ion-icon {
+    font-size: 5rem;
+}
+
+/* Estilos para borda e link de conteúdo */
+.border-glass {
+    margin: 1rem;
+    border: .4rem solid var(--set-button-color);
+    box-shadow: .05rem .01rem .5rem black;
+}
+
+.content-link {
+    width: 50rem;
+    background-color: var(--set-button-color);
+    padding: .5rem 3rem;
+    margin: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .5s;
+}
+
+/* Efeito de hover no link de conteúdo */
+.content-link:hover {
+    background-color: var(--set-button-hover-color);
+    transition: all .1s;
+}
+
+/* Estilos para o título principal */
+.tittle-name {
+    width: 100%;
+    color: var(--set-tittle-color);
+    text-shadow: .3rem .1rem .5rem rgba(32, 0, 0, 0.782);
+    font-family: "Kanit";
+    font-size: 12rem;
+    cursor: pointer;
+    margin-bottom: 3rem;
+}
+
+
+
+
+/* _________________________________DEV SECTION_____________________________________________________ */
+/* Estilos para o título da seção de desenvolvedor */
+.dev-section .tittle-name {
+    color: orange;
+    text-shadow: .3rem .1rem .5rem rgba(50, 3, 3, 0.598);
+    font-family: "Poppins";
+    font-size: 8rem;
+    cursor: pointer;
+}
+
+/* Estilos para a seção de desenvolvedor e produtos */
+.dev-section,
+.products-section {
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    animation: fade .4s ease;
+    color: var(--set-etc-color);
+}
+
+.products-section {
+    flex-direction: column;
+    align-items: center;
+}
+
+.products-section p {
+    color: white;
+    font-size: 1.8rem;
+    font-family: "Poppins";
+    width: 120rem;
+    text-align: center;
+    margin-bottom: 7rem;
+}
+
+/* Estilos para a seção de produtos */
+.products {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80%;
+}
+
+/* Estilos para card de produtos */
+
+.products .content-link {
+    height: 60rem;
+    width: 40rem;
+    flex-direction: column;
+    font-size: 3rem;
+    color: white;
+    padding: 0rem 3rem 5rem 3rem;
+    border-radius: 1rem;
+}
+
+.products .content-link .product-description {
+    font-size: 1.8rem;
+    width: 100%;
+    height: 30rem;
+}
+
+.products .content-link h3 {
+    font-size: 4rem;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.products .content-link .product-value {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 4rem;
+    width: 100%;
+    height: 6rem;
+    border-radius: 5rem 0 5rem 0;
+    background-color: rgb(24, 182, 24);
+}
+
+.products .product-value.disable {
+    text-decoration: line-through .4rem;
+    font-size: 3rem;
+    background-color: rgba(90, 90, 90, 0.619);
+    border-radius: 5rem 0 5rem 0;
+}
+
+.products .product-value.promotional {
+    color: gold;
+    font-size: 4.5rem;
+    font-weight: 900;
+    text-shadow: .1rem .1rem .4rem black;
+    font-style: oblique;
+}
+
+.products .product-value ion-icon {
+    color: gold;
+    font-size: 3.5rem;
+}
+
+.products .content-link:hover {
+    transform: scale(1.2);
+}
+
+.products .content-link:hover .product-value:not(.disable) {
+    background-color: #2b9948;
+    transition: 1.5s;
+}
+
+/* Estilos para a imagem do desenvolvedor na seção de desenvolvedor */
+.dev-section .image-content img {
+    height: 20rem;
+    border-radius: 50%;
+    border: .4rem groove orange;
+    transition: all .2s;
+}
+
+/* Efeito de hover na imagem do desenvolvedor */
+.dev-section .image-content img:hover {
+    transform: scale(1.2);
+    transition: all .2s;
+}
+
+/* Estilos para a neblina em tela cheia */
+.fog-fullscreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15%;
+}
+
+/* Estilos para o título na neblina em tela cheia */
+.fog-fullscreen h2 {
+    font-size: 5rem;
+}
+
+/* Estilos para o ícone de fechar na neblina em tela cheia */
+[name="close-circle-outline"] {
+    position: absolute;
+    color: white;
+    font-size: 5rem;
+    right: 5rem;
+    top: 7rem;
+    z-index: 999;
+    cursor: pointer;
+}
+
+/* Estilos para links sociais na neblina em tela cheia */
+.social-medias {
+    font-size: 7rem;
+    cursor: pointer;
+}
+
+/* Estilos para ícones de links sociais na neblina em tela cheia */
+.social-medias ion-icon {
+    font-size: 5rem;
+    margin: 0 1rem;
+    transition: all .1s ease;
+}
+
+/* Efeito de hover em ícones de Instagram na neblina em tela cheia */
+.social-medias ion-icon.instagram:hover {
+    background-image: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    transform: scale(1.3);
+    border-radius: 1.1rem;
+}
+
+/* Efeito de hover em ícones de LinkedIn na neblina em tela cheia */
+.social-medias ion-icon.linkedin:hover {
+    transform: scale(1.3);
+    color: #0077b5;
+}
+
+/* Efeito de hover em ícones de GitHub na neblina em tela cheia */
+.social-medias ion-icon.github:hover {
+    transform: scale(1.3);
+    color: #333;
+}
+
+/* Estilos para elementos ocultos */
+.hidden {
+    display: none;
+}
+
+/* Animação de fade */
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Estilos responsivos para dispositivos com largura entre 0px e 350px */
+@media screen and (min-width: 0px) and (max-width: 350px) {
+    .profile-description {
+        height: auto;
+    }
+
+    .profile-description .description {
+        display: flex;
+        height: auto;
+        max-width: 80%;
+        order: 1;
+        flex-direction: column;
+    }
+
+    .profile-description .tittle-name h2 {
+        font-size: 3rem;
+        order: 2;
+        margin: 10% 0 -15% 0%;
+    }
+
+    .profile-description .description img {
+        height: 25rem;
+        margin: 0;
+        position: relative;
+    }
+
+    .circulo {
+        width: 25rem;
+        align-self: center;
+    }
+
+    /* Estilos para cabeçalho e rodapé */
+    header,
+    footer {
+        width: 100%;
+        background-color: var(--set-sides-color);
+        height: 5vh;
+        z-index: 2;
+    }
+
+    header {
+        position: fixed;
+        z-index: 3;
+        box-shadow: .05rem .01rem .5rem black;
+        top: 0;
+    }
+
+    footer {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        box-shadow: -.05rem -.01rem .5rem black;
+    }
+    main {
+        background-color: var(--set-main-color);
+        flex: 1;
+        margin-top: 5vh;
+        width: 100%;
+        overflow: auto;
+        margin-bottom: 10vh;
+    }
+
+    .socials-link {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .socials-link li {
+        display: none;
+    }
+
+    .content-link {
+        width: 5rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .content-link:hover {
+        width: auto;
+        height: 6.5rem;
+        transform: scale(1.2);
+    }
+
+    .tittle-name {
+        font-size: 3rem;
+    }
+
+    .dev-section .image-content img {
+        height: 13rem;
+    }
+
+    .dev-section .tittle-name h2 {
+        font-size: 2rem;
+        margin-block: 2rem;
+    }
+
+    [name="close-circle-outline"] {
+        position: absolute;
+        color: white;
+        font-size: 5rem;
+        right: 50%;
+        top: 45rem;
+        transform: translateX(50%);
+        cursor: pointer;
+    }
+
+    .social-medias {
+        font-size: 1rem;
+    }
+
+    .content-copy h3 {
+        font-size: 1.2rem;
+    }
+
+    .content-copy span {
+        display: none;
+    }
+
+    .content-copy h2 {
+        margin: 1.2rem;
+        font-size: 1.2rem;
+    }
+
+    .content-copy img {
+        height: 1.5rem;
+    }
+
+    .socials-link ion-icon {
+        font-size: 5rem;
+        transition: all .1s ease;
+    }
+
+    .socials-link [name="logo-instagram"]:hover {
+        background-image: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+        height: 5rem;
+        transition: all .1s ease;
+        border-radius: 1rem;
+    }
+
+    .socials-link [name="logo-facebook"]:hover {
+        transform: scale(1.3);
+        transition: all .1s ease;
+        color: #0077b5;
+    }
+
+    .socials-link [name="logo-whatsapp"]:hover {
+        transform: scale(1.3);
+        transition: all .1s ease;
+        color: #31b85e;
+    }
+
+    .fog-fullscreen {
+        z-index: 99;
+    }
+
+    .products-section {
+        padding: 20%;
+    }
+
+    .products-section .products {
+        flex-direction: column;
+        transform: scale(.5);
+
+    }
+
+    .info-product p {
+        width: 140%;
+        display: flex;
+        margin: 25% 0 -40% -23%;
+        font-size: 1rem;
+    }
+
+    .products-section .products .content-link {
+        height: 20rem;
+    }
+
+    .products-section [name="close-circle-outline"] {
+        top: 48rem;
+    }
+
+    .products-section .products .product-description {
+        display: none;
+    }
+}
+
+/* Estilos responsivos para dispositivos com largura entre 351px e 750px */
+@media screen and (min-width: 351px) and (max-width: 750px) {
+    .profile-description {
+        height: 85vh;
+    }
+
+    .profile-description .description {
+        display: flex;
+        height: auto;
+        max-width: 80%;
+        order: 1;
+        flex-direction: column;
+    }
+
+    .profile-description .tittle-name h2 {
+        font-size: 3rem;
+        order: 2;
+        margin: 10% 0 -15% 0%;
+    }
+
+    .profile-description .description img {
+        height: 25rem;
+        position: relative;
+        margin: 0;
+    }
+
+    .circulo {
+        width: 25rem;
+        align-self: center;
+    }
+
+    [name="close-circle-outline"] {
+        position: absolute;
+        color: white;
+        font-size: 5rem;
+        right: 50%;
+        top: 68rem;
+        transform: translateX(50%);
+        cursor: pointer;
+    }
+
+    /* Estilos para cabeçalho e rodapé */
+    header,
+    footer {
+        width: 100%;
+        background-color: var(--set-sides-color);
+        height: 5vh;
+        z-index: 2;
+    }
+
+    header {
+        position: fixed;
+        z-index: 3;
+        box-shadow: .05rem .01rem .5rem black;
+        top: 0;
+    }
+
+    footer {
+        bottom: 0;
+        position: fixed;
+        box-shadow: -.05rem -.01rem .5rem black;
+    }
+
+    /* Estilos para a seção principal (main) */
+    main {
+        background-color: var(--set-main-color);
+        flex: 1;
+        margin-top: 5vh;
+        width: 100%;
+        overflow: auto;
+        margin-bottom: 10vh;
+    }
+
+    .content-link {
+        width: 32rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .tittle-name {
+        font-size: 3rem;
+    }
+
+    .dev-section .tittle-name h2 {
+        font-size: 2rem;
+    }
+
+    .content-copy h3 {
+        font-size: 1.2rem;
+    }
+
+    .content-copy span {
+        font-size: 1.2rem;
+        font-weight: 650;
+    }
+
+    .content-copy h2 {
+        margin: 1.2rem;
+        font-size: 1.2rem;
+    }
+
+    .content-copy img {
+        height: 1.5rem;
+    }
+    
+    .products-section {
+        padding: 20%;
+    }
+
+    .products-section .products {
+        flex-direction: row;
+        transform: scale(.5);
+    }
+
+    .info-product p {
+        width: 140%;
+        display: flex;
+        margin: 0rem -20% -23% -23%;
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (min-width: 751px) and (max-width: 1050px) {
+
+    footer {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+    }
+
+    .dev-section .tittle-name h2 {
+        font-size: 4rem;
+    }
+
+    .content-copy h3 {
+        font-size: 1.8rem;
+    }
+
+    .content-copy span {
+        font-size: 1.8rem;
+        font-weight: 650;
+    }
+
+    .content-copy h2 {
+        margin: 2.2rem;
+        font-size: 2.2rem;
+    }
+
+    .content-copy img {
+        height: 2.5rem;
+    }
+}
