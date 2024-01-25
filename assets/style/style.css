@@ -364,7 +364,8 @@ a {
 
 /* Efeito de hover na imagem do desenvolvedor */
 .dev-section .image-content img:hover {
-    transform: scale(1.2);
+    position: relative;
+    transform: scale(1.2) translateY(-2rem);
     transition: all .2s;
 }
 
