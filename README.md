@@ -14,7 +14,7 @@ This Landing Page is designed to help personal trainers showcase their social me
 
 1. Clone the repository to your local machine.
    ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   git clone git@github.com:Kriegerl1/drrPersonalSite.git
 
     Customize the content.
         Update the index.html file with your personal information, social media links, and product details.
