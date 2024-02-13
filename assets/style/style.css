@@ -2,7 +2,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-size: 50.5%;
+    font-size: 62.5%;
     box-sizing: border-box;
     z-index: 2;
 }
@@ -28,7 +28,7 @@ body {
     z-index: 0;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    margin: 0;
 }
 
 /* Estilos para cabeçalho e rodapé */
@@ -36,27 +36,26 @@ header,
 footer {
     width: 100%;
     background-color: var(--set-sides-color);
-    height: 5vh;
-    z-index: 2;
+    height: 7vh;
+    z-index: 99;
 }
 
 header {
     position: fixed;
-    z-index: 3;
-    box-shadow: .05rem .01rem .5rem black;
+    top: 0; 
+    box-shadow: 0 .1rem .5rem rgba(0, 0, 0, 0.5); 
+}
+
+main {
+    background-color: var(--set-main-color);
+    margin-top: 5vh;
 }
 
 footer {
-    bottom: 0;
     position: fixed;
-    box-shadow: -.05rem -.01rem .5rem black;
-}
-
-/* Estilos para a seção principal (main) */
-main {
-    background-color: var(--set-main-color);
-    flex: 1;
-    margin-top: 5vh;
+    margin-top: 100% ;
+    bottom: 0;
+    box-shadow: 0 -.1rem .5rem rgba(0, 0, 0, 0.5); /* Melhorando a sombra */
 }
 
 /* Estilos para a imagem de fundo */
@@ -68,7 +67,7 @@ main {
 .background-image img {
     z-index: 1;
     position: fixed;
-    height: 90vh;
+    height: 100%;
     width: 100%;
     object-fit: cover;
 }
@@ -146,6 +145,7 @@ main {
 /* Estilos para a seção do cabeçalho */
 .profile-description {
     width: 100%;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -185,6 +185,9 @@ main {
 }
 
 /* Estilos para links sociais */
+.socials-link{
+    margin-bottom: 30%;
+}
 .socials-link li,
 a {
     list-style: none;
@@ -254,16 +257,21 @@ a {
 .products-section {
     justify-content: center;
     align-items: center;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.95);
     display: flex;
     width: 100%;
-    height: 100vh;
+    height: 200vh;
     z-index: 999;
+    margin-top: 7vh;
     animation: fade .4s ease;
     color: var(--set-etc-color);
+}
+.dev-section{
+    height: 100vh;
+    position: fixed;
 }
 
 .products-section {
@@ -299,6 +307,7 @@ a {
     color: white;
     padding: 0rem 3rem 5rem 3rem;
     border-radius: 1rem;
+
 }
 
 .products .content-link .product-description {
@@ -473,15 +482,6 @@ a {
         align-self: center;
     }
 
-    /* Estilos para cabeçalho e rodapé */
-    header,
-    footer {
-        width: 100%;
-        background-color: var(--set-sides-color);
-        height: 5vh;
-        z-index: 2;
-    }
-
     header {
         position: fixed;
         z-index: 3;
@@ -489,12 +489,6 @@ a {
         top: 0;
     }
 
-    footer {
-        position: fixed;
-        width: 100%;
-        bottom: 0;
-        box-shadow: -.05rem -.01rem .5rem black;
-    }
     main {
         background-color: var(--set-main-color);
         flex: 1;
@@ -611,7 +605,7 @@ a {
     .info-product p {
         width: 140%;
         display: flex;
-        margin: 25% 0 -40% -23%;
+        margin: 25% 0 -35% -23%;
         font-size: 1rem;
     }
 
@@ -630,8 +624,12 @@ a {
 
 /* Estilos responsivos para dispositivos com largura entre 351px e 750px */
 @media screen and (min-width: 351px) and (max-width: 750px) {
+    .products-section{
+        position: fixed;
+        height: 120vh;
+    }
     .profile-description {
-        height: 85vh;
+        height: auto
     }
 
     .profile-description .description {
@@ -663,32 +661,19 @@ a {
         position: absolute;
         color: white;
         font-size: 5rem;
-        right: 50%;
-        top: 68rem;
+        right: 20%;
+        top: 5%;
         transform: translateX(50%);
         cursor: pointer;
     }
 
     /* Estilos para cabeçalho e rodapé */
-    header,
-    footer {
-        width: 100%;
-        background-color: var(--set-sides-color);
-        height: 5vh;
-        z-index: 2;
-    }
 
     header {
         position: fixed;
         z-index: 3;
         box-shadow: .05rem .01rem .5rem black;
         top: 0;
-    }
-
-    footer {
-        bottom: 0;
-        position: fixed;
-        box-shadow: -.05rem -.01rem .5rem black;
     }
 
     /* Estilos para a seção principal (main) */
@@ -751,12 +736,6 @@ a {
 }
 
 @media screen and (min-width: 751px) and (max-width: 1050px) {
-
-    footer {
-        position: absolute;
-        width: 100%;
-        bottom: 0;
-    }
 
     .dev-section .tittle-name h2 {
         font-size: 4rem;
